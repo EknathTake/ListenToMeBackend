@@ -11,6 +11,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+/**
+ * 
+ * @author eknath.take
+ *
+ */
 @Entity
 @Table(name = "TACTION")
 public class Action {
