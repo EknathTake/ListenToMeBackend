@@ -9,6 +9,7 @@ import javax.inject.Named;
 import org.springframework.stereotype.Component;
 
 import com.listenme.domain.entity.Action;
+import com.listenme.domain.entity.Activity;
 import com.listenme.process.api.ListenMeProcess;
 import com.listenme.service.api.ListenMeService;
 
@@ -20,14 +21,19 @@ public class ListenMeProcessImpl implements ListenMeProcess {
 	private ListenMeService listenMeService;
 
 	@Override
-	public List<Action> saveActions() {
-		listenMeService.saveActions();
+	public List<Action> saveActions(Action action) {
+		listenMeService.saveActions(action);
+		return null;
+	}
+
+	@Override
+	public List<Action> saveActivity(Activity activity) {
+		listenMeService.saveActivity(activity);
 		return null;
 	}
 
 	@Override
 	public Set<Action> predictPossibleActions(String input) {
-		// TODO Auto-generated method stub
 		return listenMeService.predictPossibleActions(input);
 	}
 
