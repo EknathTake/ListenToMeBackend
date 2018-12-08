@@ -2,8 +2,8 @@ package com.listenme.service.api;
 
 import java.util.Set;
 
-import com.listenme.domain.entity.Action;
-import com.listenme.domain.entity.Activity;
+import com.listenme.domain.model.Action;
+import com.listenme.domain.model.Activity;
 
 public interface ListenMeService {
 

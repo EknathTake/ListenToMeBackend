@@ -3,8 +3,8 @@ package com.listenme.process.api;
 import java.util.List;
 import java.util.Set;
 
-import com.listenme.domain.entity.Action;
-import com.listenme.domain.entity.Activity;
+import com.listenme.domain.model.Action;
+import com.listenme.domain.model.Activity;
 
 public interface ListenMeProcess {
 

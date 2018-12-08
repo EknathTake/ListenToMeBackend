@@ -8,8 +8,8 @@ import javax.inject.Named;
 
 import org.springframework.stereotype.Component;
 
-import com.listenme.domain.entity.Action;
-import com.listenme.domain.entity.Activity;
+import com.listenme.domain.model.Action;
+import com.listenme.domain.model.Activity;
 import com.listenme.process.api.ListenMeProcess;
 import com.listenme.service.api.ListenMeService;
 
