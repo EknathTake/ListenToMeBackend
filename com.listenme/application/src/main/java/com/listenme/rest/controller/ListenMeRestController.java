@@ -23,6 +23,12 @@ public class ListenMeRestController {
 	@Named("listenMeProcess")
 	private ListenMeProcess listenMeProcess;
 
+	@GetMapping(path = "/train")
+	public ListenMeRestControllerResponse train() {
+		listenMeProcess.train();
+		return null;
+	}
+
 	@PostMapping(path = "/action")
 	public ListenMeRestControllerResponse saveActions(@RequestBody Action action) {
 		listenMeProcess.saveActions(action);
@@ -36,7 +42,7 @@ public class ListenMeRestController {
 	}
 
 	@GetMapping(path = "/action")
-	public Set<Action> predictPossibleActions(@RequestParam(name = "ip") String input) {
+	public Set<Action> predictPossibleActions(@RequestParam(name = "q") String input) {
 		return listenMeProcess.predictPossibleActions(input);
 	}
 

@@ -11,8 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.listenme.domain.model.Activity;
-
 /**
  * 
  * @author eknath.take

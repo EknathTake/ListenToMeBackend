@@ -1,6 +1,5 @@
 package com.listenme.process.impl;
 
-import java.util.List;
 import java.util.Set;
 
 import javax.inject.Inject;
@@ -21,20 +20,24 @@ public class ListenMeProcessImpl implements ListenMeProcess {
 	private ListenMeService listenMeService;
 
 	@Override
-	public List<Action> saveActions(Action action) {
+	public void saveActions(Action action) {
 		listenMeService.saveActions(action);
-		return null;
 	}
 
 	@Override
-	public List<Action> saveActivity(Activity activity) {
+	public void saveActivity(Activity activity) {
 		listenMeService.saveActivity(activity);
-		return null;
 	}
 
 	@Override
 	public Set<Action> predictPossibleActions(String input) {
 		return listenMeService.predictPossibleActions(input);
+	}
+
+	@Override
+	public void train() {
+		listenMeService.train();
+
 	}
 
 }

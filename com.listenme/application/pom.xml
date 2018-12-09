@@ -1,59 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.listenme</groupId>
-        <artifactId>com.listenme</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
-    <artifactId>com.listenme.application</artifactId>
-    <packaging>war</packaging>
-    <name>Project Module - Application</name>
-    <description>This is the main module of the project. It contains Application.java class, that contains main method, 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.listenme</groupId>
+		<artifactId>com.listenme</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>com.listenme.application</artifactId>
+	<packaging>war</packaging>
+	<name>Project Module - Application</name>
+	<description>This is the main module of the project. It contains Application.java class, that contains main method, 
     necessary to run Spring Boot applications. It contains all necessary application configuration properties. 
     It contains all web controllers, views and web resources. It include Service Implementation module
     as dependency that contains Model Module, Repository Module and Service Api Module. </description>
 
-    <dependencies>
+	<properties>
+		<!-- The main class to start by executing java -jar -->
+		<start-class>com.listenme.SampleWebJspApplication</start-class>
+	</properties>
+	<dependencies>
 
-      <!-- Project modules -->
-      <dependency>
-        <groupId>com.listenme</groupId>
-        <artifactId>com.listenme.process.impl</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+		<!-- Project modules -->
+		<dependency>
+			<groupId>com.listenme</groupId>
+			<artifactId>com.listenme.process.impl</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 
-      <!-- Spring Boot dependencies -->
-		  <dependency>
-			  <groupId>org.apache.tomcat.embed</groupId>
-			  <artifactId>tomcat-embed-jasper</artifactId>
-			  <scope>provided</scope>
-		  </dependency>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-thymeleaf</artifactId>
-      </dependency>
+		<!-- Spring Boot dependencies -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
 
-      <dependency>
-      	<groupId>com.listenme</groupId>
-      	<artifactId>com.listenme.model</artifactId>
-      	<version>0.0.1-SNAPSHOT</version>
-      	<type>war</type>
-      </dependency>
-    </dependencies>
-    
-    <build>
-        <plugins>
-            <!-- Spring Boot plugins -->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+		<dependency>
+			<groupId>com.listenme</groupId>
+			<artifactId>com.listenme.model</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Spring Boot plugins -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

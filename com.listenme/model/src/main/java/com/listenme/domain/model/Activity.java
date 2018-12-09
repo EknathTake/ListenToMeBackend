@@ -8,6 +8,8 @@ public class Activity {
 
 	private String userResponse;
 
+	private Action actions;
+
 	public Long getId() {
 		return id;
 	}
@@ -32,6 +34,14 @@ public class Activity {
 		this.userResponse = userResponse;
 	}
 
+	public Action getActions() {
+		return actions;
+	}
+
+	public void setActions(Action actions) {
+		this.actions = actions;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -41,6 +51,8 @@ public class Activity {
 		builder.append(fieldInput);
 		builder.append(", userResponse=");
 		builder.append(userResponse);
+		builder.append(", actions=");
+		builder.append(actions);
 		builder.append("]");
 		return builder.toString();
 	}

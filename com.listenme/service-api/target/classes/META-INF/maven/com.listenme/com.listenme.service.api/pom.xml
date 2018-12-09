@@ -21,6 +21,11 @@
         <version>${project.version}</version>
       </dependency>
 
+      <dependency>
+      	<groupId>com.listenme</groupId>
+      	<artifactId>com.listenme.model</artifactId>
+      	<version>0.0.1-SNAPSHOT</version>
+      </dependency>
     </dependencies>
 
     
